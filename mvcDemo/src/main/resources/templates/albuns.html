@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Aula MVC</title>
+</head>
+<body>
+<h1>Lista de albuns mais escutados pela dupla em outubro</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Nome</th>
+    <th>Artista</th>
+    <th>Nota</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="album: ${albuns}" >
+    <td th:text="${album.nome}">Nome</td>
+    <td th:text="${album.artista}" >Artista</td>
+    <td th:text="${album.nota}" >Nota</td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>
